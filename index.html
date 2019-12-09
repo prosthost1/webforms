@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Web Forms</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <h1>Форми</h1>
+      <div class="first">
+        <div class="simple">
+          <form action="">
+            <h2>01. проста форма</h2>
+            <label for="name"
+              ><input
+                type="text"
+                name=""
+                id="name"
+                class="name"
+                placeholder="Введіть ім’я"
+            /></label>
+            <label for="email"
+              ><input type="text" name="" id="email" placeholder="Email"
+            /></label>
+            <label for="city">
+              <select name="" id="city">
+                <option value="Ваше місто">Ваше місто</option>
+                <option value="Київ"><p>Київ</p></option>
+                <option value="Львів"><p>Львів</p></option>
+                <option value="Хмельницький"><p>Хмельницький</p></option>
+              </select>
+            </label>
+            <label for="email"
+              ><textarea
+                name=""
+                id="email"
+                cols="30"
+                rows="10"
+                placeholder="Email"
+              ></textarea
+            ></label>
+            <label for="reg"
+              ><input
+                type="submit"
+                name=""
+                id="reg"
+                value="Зареєструватися"
+                class="reg"
+            /></label>
+          </form>
+        </div>
+      </div>
+      <div class="second">
+        <h2>02. елементи</h2>
+        <form action="">
+          <div class="radio">
+            <p>
+              <input type="radio" name="shipping" id="mail" value="mail" checked/>
+              <label for="mail">Нова Пошта</label>
+            </p>
+            <p>
+              <input
+                type="radio"
+                name="shipping"
+                id="courier"
+                value="courier"
+              />
+              <label for="courier">Кур’єр</label>
+            </p>
+            <p>
+              <input type="radio" name="shipping" id="pickup" value="pickup" />
+              <label for="pickup">Самовивіз</label>
+            </p>
+          </div>
+          <div class="checkbox">
+            <p>
+              <input
+                type="checkbox"
+                name=""
+                id="conditions"
+                value="conditions"
+              /><label for="conditions">Прочитав умови договору</label>
+            </p>
+            <p>
+              <input type="checkbox" name="" id="pdv" value="pdv" /><label
+                for="pdv"
+              >Згідний з ПДВ 9%</label>
+            </p>
+            <p>
+              <input type="checkbox" name="" id="news" value="news" /><label
+                for="news"
+              >Отримувати новини на ел. пошту</label>
+            </p>
+          </div>
+          <div class="filter">
+            <p>Статус</p>
+            <p>
+              <input type="checkbox" name="status" id="new"><label for="new">Статус</label>
+            </p>
+            <p>
+              <input type="checkbox" name="status" id="discount"><label for="discount">Акційні товари</label>
+            </p>
+            <p>
+              <input type="checkbox" name="status" id="sellout"><label for="sellout">Розпродаж</label>
+            </p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

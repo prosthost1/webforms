@@ -1,0 +1,181 @@
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/Roboto-Regular.eot");
+  src: url("../fonts/Roboto-Regular.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/Roboto-Regular.woff2") format("woff2"),
+    url("../fonts/Roboto-Regular.woff") format("woff"),
+    url("../fonts/Roboto-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/Roboto-Bold.eot");
+  src: url("../fonts/Roboto-Bold.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/Roboto-Bold.woff2") format("woff2"),
+    url("../fonts/Roboto-Bold.woff") format("woff"),
+    url("../fonts/Roboto-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+h1 {
+  font: 700 30px "Roboto";
+  color: #1f222c;
+  text-align: center;
+}
+.wrapper {
+  width: 83%;
+  margin: 0 auto;
+}
+.first {
+  padding-bottom: 40px;
+  border-bottom: 1px solid #dcdcde;
+}
+.simple {
+  display: inline-block;
+  max-width: 330px;
+}
+input,
+textarea {
+  box-sizing: border-box;
+  outline: none;
+}
+textarea {
+  resize: vertical;
+}
+h2 {
+  font: 700 20px "Roboto";
+  color: #b3b3b3;
+  text-transform: uppercase;
+}
+.second h2 {
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+.simple input,
+.simple select,
+.simple textarea {
+  width: 100%;
+  margin-bottom: 10px;
+}
+.simple input,
+.simple textarea {
+  padding: 12px 15px;
+  border: 1px solid #cccccc;
+  border-radius: 3px;
+}
+.simple input:focus,
+.simple textarea:focus {
+  box-shadow: 0 0 3px rgba(62, 106, 255, 0.55);
+  border: 1px solid #3e6aff;
+}
+::-webkit-input-placeholder {
+  font: 400 14px "Roboto";
+  color: #b3b3b3;
+}
+.reg {
+  margin-bottom: 50px;
+  font: 700 14px "Roboto";
+  color: #fff;
+  background-color: #12d661;
+  border-radius: 3px;
+  transition: all 0.1s ease;
+}
+.reg:hover {
+  background-color: #07be51;
+  box-shadow: 0 2px 3px rgba(8, 118, 52, 0.35);
+}
+.second {
+  padding: 50px 0;
+}
+.radio,
+.checkbox,
+.filter {
+  display: inline-block;
+}
+.radio {
+  width: 17%;
+}
+.filter {
+  width: 48%;
+  vertical-align: x;
+}
+.second p {
+  margin: 0;
+  font: 400 14px "Roboto";
+  color: #1f222c;
+}
+.radio p {
+  margin: 0 0 20px 10px;
+}
+.checkbox p {
+  margin: 0 0 20px 15px;
+}
+.checkbox input {
+  margin: 0;
+}
+[type="radio"],
+[type="checkbox"] {
+  visibility: hidden;
+}
+.radio label,
+.checkbox label {
+  position: relative;
+}
+.radio label:hover,
+.checkbox label:hover {
+  cursor: pointer;
+}
+.radio label:before {
+  content: '';
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  left: -25px;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+}
+.radio input:checked+label:before {
+  border-color: #3e6aff;
+}
+.radio input:checked+label:after {
+  content: '';
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  left: -20px;
+  top: 4px;
+  border-radius: 50%;
+  background-color: #3e6aff;
+}
+.checkbox label:before {
+  content: '';
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  left: -26px;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+}
+.checkbox input:checked+label:before {
+  border: 1px solid #3e6aff;
+}
+.checkbox input:checked+label:after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  height: 3px;
+  left: -21px;
+  top: 5px;
+  transform: rotate(-45deg);
+  border-bottom: 2px solid #244dd7;
+  border-left: 2px solid #244dd7;
+}
+.filter p {
+  display: inline-block;
+}
