@@ -23,6 +23,13 @@ body {
   margin: 0;
   padding: 0;
 }
+label {
+  user-select: none;
+}
+label:before,
+label:after {
+  transition: all 0.2s ease;
+}
 .clear:after {
   content: '';
   display: block;
@@ -96,7 +103,7 @@ h2 {
   color: #fff;
   background-color: #12d661;
   border-radius: 3px;
-  transition: all 0.1s ease;
+  transition: all 0.2s ease;
 }
 .reg:hover {
   background-color: #07be51;
@@ -130,7 +137,8 @@ h2 {
   border: 1px solid #e5e5e5; 
   border-radius: 3px; 
 }
-.second p {
+.second p,
+.third p {
   margin: 0;
   font: 400 14px "Roboto";
   color: #1f222c;
@@ -141,7 +149,7 @@ h2 {
 .checkbox p {
   margin: 0 0 20px 15px;
 }
-.checkbox input {
+input {
   margin: 0;
 }
 [type="radio"],
@@ -175,7 +183,7 @@ h2 {
   width: 7px;
   height: 7px;
   left: -20px;
-  top: 4px;
+  top: 5px;
   border-radius: 50%;
   background-color: #3e6aff;
 }
@@ -212,7 +220,10 @@ h2 {
 .filter label {
   margin: 0 14px;
 }
-.filter label:before {
+.filter p:first-child {
+  margin-bottom: 30px;
+}
+.filter label:not([for="date"]):before {
   content: "";
   position: absolute;
   width: 16px;
@@ -237,30 +248,31 @@ h2 {
   border-bottom: 2px solid #244dd7;
   border-left: 2px solid #244dd7;
 }
-.filter .title:last-child {
-  padding-top: 30px;
-}
 .filter [for="sellout"] {
   margin-right: 0;
 }
 .gender {
-  width: 145px;
+  width: 42.7%;
   float: left;
+  position: relative;
 }
-.gender input {
+.third input {
   display: none;
 }
 [for="male"]:before,
 [for="female"]:before {
   content: '';
-  display: inline-block;
+  position: absolute;
   width: 72px;
   height: 72px;
+  left: 0;
 }
 [for="male"]:before {
+  top: 0;
   background-image: url(../images/male.png);
 }
 [for="female"]:before {
+  top: 80px;
   background-image: url(../images/female.png);
 }
 .male:checked+label:before {
@@ -269,11 +281,53 @@ h2 {
 .female:checked+label:before {
   background-image: url(../images/actfemale.png);
 }
-.gender label:hover {
+.third label:hover {
   cursor: pointer;
 }
 .gender p {
   margin: 0;
+  padding: 30px 0 0 85px;
   font: 700 16px "Roboto";
-  vertical-align: top;
+}
+.gender p:first-child {
+  margin-bottom: 28px;
+}
+.another {
+  display: inline-block;
+  padding-top: 30px;
+}
+.another p {
+  margin-bottom: 30px;
+}
+.another p:last-child {
+  margin-bottom: 0;
+}
+.another label {
+  position: relative;
+}
+.another label:before {
+  content: '';
+  position: absolute;
+  width: 45px;
+  height: 25px;
+  top: -4px;
+  left: -65px;
+  border-radius: 12px;
+  background-color: #cfcfd1;
+}
+.another label:after {
+  content: '';
+  position: absolute;
+  width: 21px;
+  height: 21px;
+  left: -63px;
+  top: -2px;
+  border-radius: 50%;
+  background-color: #fff;
+}
+.another input:checked+label:before {
+  background-color: #3e6aff;
+}
+.another input:checked+label:after {
+  left: -43px;
 }
