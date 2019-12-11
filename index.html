@@ -58,7 +58,13 @@
         <form action="">
           <div class="radio">
             <p>
-              <input type="radio" name="shipping" id="mail" value="mail" checked/>
+              <input
+                type="radio"
+                name="shipping"
+                id="mail"
+                value="mail"
+                checked
+              />
               <label for="mail">Нова Пошта</label>
             </p>
             <p>
@@ -71,7 +77,13 @@
               <label for="courier">Кур’єр</label>
             </p>
             <p>
-              <input type="radio" name="shipping" id="pickup" value="pickup" />
+              <input
+                type="radio"
+                name="shipping"
+                id="pickup"
+                value="pickup"
+                disabled
+              />
               <label for="pickup">Самовивіз</label>
             </p>
           </div>
@@ -87,26 +99,60 @@
             <p>
               <input type="checkbox" name="" id="pdv" value="pdv" /><label
                 for="pdv"
-              >Згідний з ПДВ 9%</label>
+                >Згідний з ПДВ 9%</label
+              >
             </p>
             <p>
-              <input type="checkbox" name="" id="news" value="news" /><label
-                for="news"
-              >Отримувати новини на ел. пошту</label>
+              <input
+                type="checkbox"
+                name=""
+                id="news"
+                value="news"
+                disabled
+              /><label for="news">Отримувати новини на ел. пошту</label>
             </p>
           </div>
-          <div class="filter">
-            <p>Статус</p>
+          <fieldset class="filter">
+            <p class="title">Статус</p>
             <p>
-              <input type="checkbox" name="status" id="new"><label for="new">Статус</label>
+              <input type="checkbox" name="status" id="new" /><label for="new"
+                >Новинки</label
+              >
             </p>
             <p>
-              <input type="checkbox" name="status" id="discount"><label for="discount">Акційні товари</label>
+              <input type="checkbox" name="status" id="discount" /><label
+                for="discount"
+                >Акційні товари</label
+              >
             </p>
             <p>
-              <input type="checkbox" name="status" id="sellout"><label for="sellout">Розпродаж</label>
+              <input type="checkbox" name="status" id="sellout" /><label
+                for="sellout"
+                >Розпродаж</label
+              >
             </p>
+            <p class="title">Дата</p>
+          </fieldset>
+        </form>
+      </div>
+      <div class="third">
+        <h2>03. стилізовані чекбокси</h2>
+        <form action="" class="clear">
+          <div class="gender">
+            <p>
+              <input type="checkbox" id="male" value="male" class="male" />
+              <label for="male">Чоловік</label>
+            </p>
+            <input
+              type="checkbox"
+              id="female"
+              value="female"
+              class="female"
+            /><label for="female"><p>Жінка</p> </label>
           </div>
+          <input type="checkbox" id="news" /><label for="news"></label>
+          <input type="checkbox" id="sausage" /><label for="sausage"></label>
+          <input type="checkbox" id="lights" /><label for="lights"></label>
         </form>
       </div>
     </div>
