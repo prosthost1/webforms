@@ -45,7 +45,8 @@ h1 {
   margin: 0 auto;
 }
 .first,
-.second {
+.second,
+.third {
   border-bottom: 1px solid #dcdcde;
 }
 .first {
@@ -109,9 +110,11 @@ h2 {
   background-color: #07be51;
   box-shadow: 0 2px 3px rgba(8, 118, 52, 0.35);
 }
-.second,
-.third {
+.second {
   padding: 50px 0;
+}
+.third {
+  padding: 50px 0 70px;
 }
 .radio,
 .checkbox {
@@ -217,6 +220,9 @@ input {
   padding-right: 20px;
   color: #b3b3b3;
 }
+.filter .title--last {
+  padding-right: 32px;
+}
 .filter label {
   margin: 0 14px;
 }
@@ -289,6 +295,12 @@ input {
   padding: 30px 0 0 85px;
   font: 700 16px "Roboto";
 }
+.gender label {
+  transition: all 0.2s ease;
+}
+.gender input:checked+label {
+  color: #244dd7;
+}
 .gender p:first-child {
   margin-bottom: 28px;
 }
@@ -330,4 +342,8 @@ input {
 }
 .another input:checked+label:after {
   left: -43px;
+}
+h3 {
+  font: 700 18px "Roboto";
+  color: #1f222c;
 }
