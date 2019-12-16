@@ -49,9 +49,6 @@ h1 {
 .third {
   border-bottom: 1px solid #dcdcde;
 }
-.first {
-  padding-bottom: 40px;
-}
 .simple {
   display: inline-block;
   max-width: 330px;
@@ -70,9 +67,13 @@ h2 {
   text-transform: uppercase;
 }
 .second h2,
-.third h2 {
-  margin-top: 0;
-  margin-bottom: 20px;
+.third h2,
+.table-form h2 {
+  margin: 0;
+  padding-bottom: 20px;
+}
+.table-form h2 {
+  padding-bottom: 35px;
 }
 .simple input,
 .simple select,
@@ -80,17 +81,31 @@ h2 {
   width: 100%;
   margin-bottom: 10px;
 }
-.simple select {
-  padding: 17px;
+.simple select,
+.table-form select {
+  -webkit-appearance: none;
+  padding: 12px 17px;
+  font: 400 14px "Roboto";
+  background-color: #fff;
+  outline: none;
 }
 .simple input,
-.simple textarea {
-  padding: 12px 15px;
+.simple textarea,
+.simple select,
+.table-form input,
+.table-form select {
   border: 1px solid #cccccc;
   border-radius: 3px;
 }
-.simple input:focus,
-.simple textarea:focus {
+.simple input,
+.simple textarea,
+.table-form input {
+  padding: 12px 15px;
+}
+.simple input:not(.reg):focus,
+.simple textarea:focus,
+.simple select:focus,
+.table-form input:focus {
   box-shadow: 0 0 3px rgba(62, 106, 255, 0.55);
   border: 1px solid #3e6aff;
 }
@@ -110,7 +125,9 @@ h2 {
   background-color: #07be51;
   box-shadow: 0 2px 3px rgba(8, 118, 52, 0.35);
 }
-.second {
+.second,
+.first,
+.table-form {
   padding: 50px 0;
 }
 .third {
@@ -141,7 +158,8 @@ h2 {
   border-radius: 3px; 
 }
 .second p,
-.third p {
+.third p,
+.table-form {
   margin: 0;
   font: 400 14px "Roboto";
   color: #1f222c;
@@ -164,11 +182,14 @@ input {
 .filter label {
   position: relative;
 }
+.filter [for="date"] {
+  margin: 0;
+}
 .radio label:hover,
 .checkbox label:hover {
   cursor: pointer;
 }
-.radio label:before {
+.radio label:before  {
   content: "";
   position: absolute;
   width: 15px;
@@ -265,20 +286,20 @@ input {
 .third input {
   display: none;
 }
-[for="male"]:before,
-[for="female"]:before {
+.gender [for="male"]:before,
+.gender [for="female"]:before {
   content: '';
   position: absolute;
   width: 72px;
   height: 72px;
   left: 0;
 }
-[for="male"]:before {
-  top: 0;
+.gender [for="male"]:before {
+  top: 5px;
   background-image: url(../images/male.png);
 }
-[for="female"]:before {
-  top: 80px;
+.gender [for="female"]:before {
+  top: 85px;
   background-image: url(../images/female.png);
 }
 .male:checked+label:before {
@@ -292,7 +313,7 @@ input {
 }
 .gender p {
   margin: 0;
-  padding: 30px 0 0 85px;
+  padding: 35px 0 0 85px;
   font: 700 16px "Roboto";
 }
 .gender label {
@@ -343,7 +364,42 @@ input {
 .another input:checked+label:after {
   left: -43px;
 }
+.date {
+  padding: 10px 16px;
+  font: 400 14px "Roboto";
+  -webkit-appearance: none;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
 h3 {
+  margin: 0;
+  padding-bottom: 25px;
   font: 700 18px "Roboto";
   color: #1f222c;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+th {
+  font-weight: normal;
+}
+.table-form table {
+  width: 41.8%;
+}
+.table-form tr th:first-child {
+  text-align: left;
+}
+.table-form tr th:last-child,
+.table-form tr td:last-child {
+  text-align: right;
+}
+.table-form input,
+.table-form select {
+  width: 100%;
+}
+.table-form td p {
+  display: inline-block;
+  margin: 0;
+  width: 75px;
 }

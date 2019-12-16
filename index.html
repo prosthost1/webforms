@@ -17,16 +17,21 @@
             <label for="name"
               ><input
                 type="text"
-                name=""
+                name="name"
                 id="name"
                 class="name"
                 placeholder="Введіть ім’я"
             /></label>
             <label for="email"
-              ><input type="text" name="" id="email" placeholder="Email"
+              ><input
+                type="text"
+                name="email"
+                id="email"
+                name="email"
+                placeholder="Email"
             /></label>
             <label for="city">
-              <select name="" id="city">
+              <select name="location" id="city">
                 <option value="Ваше місто">Ваше місто</option>
                 <option value="Київ"><p>Київ</p></option>
                 <option value="Львів"><p>Львів</p></option>
@@ -35,7 +40,7 @@
             </label>
             <label for="email"
               ><textarea
-                name=""
+                name="email"
                 id="email"
                 cols="30"
                 rows="10"
@@ -45,7 +50,7 @@
             <label for="reg"
               ><input
                 type="submit"
-                name=""
+                name="submit"
                 id="reg"
                 value="Зареєструватися"
                 class="reg"
@@ -55,7 +60,7 @@
       </div>
       <div class="second">
         <h2>02. елементи</h2>
-        <form action="">
+        <form action="" class="clear">
           <div class="radio">
             <p>
               <input
@@ -79,7 +84,7 @@
             <p>
               <input
                 type="radio"
-                name="shipping"
+                name="radio"
                 id="pickup"
                 value="pickup"
                 disabled
@@ -91,21 +96,23 @@
             <p>
               <input
                 type="checkbox"
-                name=""
+                name="agreement"
                 id="conditions"
                 value="conditions"
               /><label for="conditions">Прочитав умови договору</label>
             </p>
             <p>
-              <input type="checkbox" name="" id="pdv" value="pdv" /><label
-                for="pdv"
-                >Згідний з ПДВ 9%</label
-              >
+              <input
+                type="checkbox"
+                name="agreement"
+                id="pdv"
+                value="pdv"
+              /><label for="pdv">Згідний з ПДВ 9%</label>
             </p>
             <p>
               <input
                 type="checkbox"
-                name=""
+                name="agreement"
                 id="news"
                 value="news"
                 disabled
@@ -115,24 +122,33 @@
           <fieldset class="filter">
             <p class="title">Статус</p>
             <p>
-              <input type="checkbox" name="status" id="new" /><label for="new"
+              <input type="checkbox" name="filter" id="new" /><label for="new"
                 >Новинки</label
               >
             </p>
             <p>
-              <input type="checkbox" name="status" id="discount" /><label
+              <input type="checkbox" name="filter" id="discount" /><label
                 for="discount"
                 >Акційні товари</label
               >
             </p>
             <p>
-              <input type="checkbox" name="status" id="sellout" /><label
+              <input type="checkbox" name="filter" id="sellout" /><label
                 for="sellout"
                 >Розпродаж</label
               >
             </p>
             <p class="title title--last">Дата</p>
-            <input type="date" id="date" value="12.12.2019"><label for="date"></label>
+            <label for="date">
+              <input
+                type="date"
+                id="date"
+                name="date"
+                value="1789-07-14"
+                autocomplete=""
+                class="date"
+              />
+            </label>
           </fieldset>
         </form>
       </div>
@@ -141,25 +157,43 @@
         <form action="" class="clear">
           <div class="gender">
             <p>
-              <input type="checkbox" id="male" value="male" class="male" />
+              <input
+                type="radio"
+                id="male"
+                value="male"
+                class="male"
+                name="gender"
+              />
               <label for="male">Чоловік</label>
             </p>
-            <p><input
-            type="checkbox"
-            id="female"
-            value="female"
-            class="female"
-            /><label for="female">Жінка</label></p>
+            <p>
+              <input
+                type="radio"
+                name="gender"
+                id="female"
+                value="female"
+                class="female"
+              /><label for="female">Жінка</label>
+            </p>
           </div>
           <div class="another">
             <p>
-              <input type="checkbox" id="another__news" /><label for="another__news">Отримувати новини</label>
+              <input type="checkbox" id="another__news" name="checkbox" /><label
+                for="another__news"
+                >Отримувати новини</label
+              >
             </p>
             <p>
-              <input type="checkbox" id="sausage" /><label for="sausage">Купити додому ковбаси</label>
+              <input type="checkbox" id="sausage" name="checkbox" /><label
+                for="sausage"
+                >Купити додому ковбаси</label
+              >
             </p>
             <p>
-              <input type="checkbox" id="lights" /><label for="lights">Включити світло</label>
+              <input type="checkbox" id="lights" name="checkbox" /><label
+                for="lights"
+                >Включити світло</label
+              >
             </p>
           </div>
         </form>
@@ -167,6 +201,81 @@
       <div class="table-form">
         <h2>04. форма таблицею</h2>
         <h3>Заповніть усі необхідні поля</h3>
+        <form action="">
+          <table>
+            <thead>
+              <tr>
+                <th>ФІО:</th>
+                <th>
+                  <label for="name">
+                    <input
+                      type="text"
+                      name="name"
+                      id="name"
+                      placeholder="Введіть ім’я"
+                    />
+                  </label>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Пароль:</td>
+                <td>
+                  <label for="password"
+                    ><input
+                      type="password"
+                      name="password"
+                      id="password"
+                      placeholder="Введіть не менше 6 символів"
+                  /></label>
+                </td>
+              </tr>
+              <tr>
+                <td>Місто:</td>
+                <td>
+                  <label for="city">
+                    <select name="" id="city">
+                      <option value="Ваше місто">Ваше місто</option>
+                      <option value="Київ"><p>Київ</p></option>
+                      <option value="Львів"><p>Львів</p></option>
+                      <option value="Хмельницький"><p>Хмельницький</p></option>
+                    </select>
+                  </label>
+                </td>
+              </tr>
+              <tr>
+                <td>Стать:</td>
+                <td>
+                  <p>
+                    <input
+                      type="radio"
+                      name="gender"
+                      id="man"
+                      value="man"
+                    /><label for="man"></label>
+                  </p>
+                  <p>
+                    <input type="radio" name="gender" value="woman" id="woman">
+                    <label for="woman"></label>
+                  </p>
+                </td>
+              </tr>
+              <tr>
+                <td>Фото:</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>Коментарій:</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td></td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+        </form>
       </div>
     </div>
   </body>
