@@ -10,7 +10,7 @@
   <body>
     <div class="wrapper">
       <h1>Форми</h1>
-      <div class="first">
+      <div class="first container">
         <div class="simple">
           <form action="">
             <h2>01. проста форма</h2>
@@ -19,7 +19,7 @@
                 type="text"
                 name="name"
                 id="name"
-                class="name"
+                class="sign-up"
                 placeholder="Введіть ім’я"
             /></label>
             <label for="email"
@@ -29,9 +29,10 @@
                 id="email"
                 name="email"
                 placeholder="Email"
+                class="sign-up"
             /></label>
             <label for="city">
-              <select name="location" id="city">
+              <select name="location" id="city" class="sign-up">
                 <option value="Ваше місто">Ваше місто</option>
                 <option value="Київ"><p>Київ</p></option>
                 <option value="Львів"><p>Львів</p></option>
@@ -45,6 +46,7 @@
                 cols="30"
                 rows="10"
                 placeholder="Email"
+                class="sign-up"
               ></textarea
             ></label>
             <label for="reg"
@@ -58,8 +60,8 @@
           </form>
         </div>
       </div>
-      <div class="second">
-        <h2>02. елементи</h2>
+      <div class="second container">
+        <h2 class="form-title">02. елементи</h2>
         <form action="" class="clear">
           <div class="radio">
             <p>
@@ -122,24 +124,24 @@
           <fieldset class="filter">
             <p class="title">Статус</p>
             <p>
-              <input type="checkbox" name="filter" id="new" /><label for="new"
+              <input type="checkbox" name="filter" id="new" /><label for="new" class="status"
                 >Новинки</label
               >
             </p>
             <p>
               <input type="checkbox" name="filter" id="discount" /><label
-                for="discount"
+                for="discount" class="status"
                 >Акційні товари</label
               >
             </p>
             <p>
               <input type="checkbox" name="filter" id="sellout" /><label
-                for="sellout"
+                for="sellout" class="sellout status"
                 >Розпродаж</label
               >
             </p>
             <p class="title title--last">Дата</p>
-            <label for="date">
+            <label for="date" class="date-label">
               <input
                 type="date"
                 id="date"
@@ -152,19 +154,19 @@
           </fieldset>
         </form>
       </div>
-      <div class="third">
-        <h2>03. стилізовані чекбокси</h2>
+      <div class="third container">
+        <h2 class="form-title">03. стилізовані чекбокси</h2>
         <form action="" class="clear">
-          <div class="gender">
+          <div class="third__gender">
             <p>
               <input
                 type="radio"
                 id="male"
                 value="male"
-                class="male"
                 name="gender"
+                class="male"
               />
-              <label for="male">Чоловік</label>
+              <label for="male" class="male-label">Чоловік</label>
             </p>
             <p>
               <input
@@ -173,7 +175,7 @@
                 id="female"
                 value="female"
                 class="female"
-              /><label for="female">Жінка</label>
+              /><label for="female" class="female-label">Жінка</label>
             </p>
           </div>
           <div class="another">
@@ -199,7 +201,7 @@
         </form>
       </div>
       <div class="table-form">
-        <h2>04. форма таблицею</h2>
+        <h2 class="form-title">04. форма таблицею</h2>
         <h3>Заповніть усі необхідні поля</h3>
         <form action="">
           <table>
@@ -213,6 +215,7 @@
                       name="name"
                       id="name"
                       placeholder="Введіть ім’я"
+                      class="w100 sign-up"
                     />
                   </label>
                 </th>
@@ -227,6 +230,7 @@
                       type="password"
                       name="password"
                       id="password"
+                      class="w100 sign-up"
                       placeholder="Введіть не менше 6 символів"
                   /></label>
                 </td>
@@ -235,7 +239,7 @@
                 <td>Місто:</td>
                 <td>
                   <label for="city">
-                    <select name="" id="city">
+                    <select name="" id="city" class="w100 sign-up">
                       <option value="Ваше місто">Ваше місто</option>
                       <option value="Київ"><p>Київ</p></option>
                       <option value="Львів"><p>Львів</p></option>
@@ -246,18 +250,23 @@
               </tr>
               <tr>
                 <td>Стать:</td>
-                <td>
+                <td class="clear gender">
                   <p>
                     <input
                       type="radio"
                       name="gender"
                       id="man"
                       value="man"
-                    /><label for="man"></label>
+                    /><label for="man" class="gender__man">Чоловік</label>
                   </p>
                   <p>
-                    <input type="radio" name="gender" value="woman" id="woman">
-                    <label for="woman"></label>
+                    <input
+                      type="radio"
+                      name="gender"
+                      value="woman"
+                      id="woman"
+                    />
+                    <label for="woman" class="gender__woman">Жінка</label>
                   </p>
                 </td>
               </tr>

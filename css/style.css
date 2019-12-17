@@ -44,9 +44,7 @@ h1 {
   width: 83%;
   margin: 0 auto;
 }
-.first,
-.second,
-.third {
+.container {
   border-bottom: 1px solid #dcdcde;
 }
 .simple {
@@ -66,19 +64,18 @@ h2 {
   color: #b3b3b3;
   text-transform: uppercase;
 }
-.second h2,
-.third h2,
-.table-form h2 {
+.form-title {
   margin: 0;
   padding-bottom: 20px;
 }
 .table-form h2 {
   padding-bottom: 35px;
 }
-.simple input,
-.simple select,
-.simple textarea {
+.sign-up,
+.reg {
   width: 100%;
+}
+.simple .sign-up {
   margin-bottom: 10px;
 }
 .simple select,
@@ -89,17 +86,11 @@ h2 {
   background-color: #fff;
   outline: none;
 }
-.simple input,
-.simple textarea,
-.simple select,
-.table-form input,
-.table-form select {
+.sign-up {
   border: 1px solid #cccccc;
   border-radius: 3px;
 }
-.simple input,
-.simple textarea,
-.table-form input {
+.sign-up {
   padding: 12px 15px;
 }
 .simple input:not(.reg):focus,
@@ -114,7 +105,7 @@ h2 {
   color: #b3b3b3;
 }
 .reg {
-  margin-bottom: 50px;
+  padding: 13px 0;
   font: 700 14px "Roboto";
   color: #fff;
   background-color: #12d661;
@@ -179,17 +170,20 @@ input {
 }
 .radio label,
 .checkbox label,
-.filter label {
+.filter label,
+.table-form label {
   position: relative;
 }
-.filter [for="date"] {
+.date-label {
   margin: 0;
 }
 .radio label:hover,
 .checkbox label:hover {
   cursor: pointer;
 }
-.radio label:before  {
+.radio label:before,
+.gender__woman:before,
+.gender__man:before {
   content: "";
   position: absolute;
   width: 15px;
@@ -198,10 +192,12 @@ input {
   border-radius: 50%;
   border: 1px solid #ccc;
 }
-.radio input:checked + label:before {
+.radio input:checked + label:before,
+.table-form input:checked+label:before {
   border-color: #3e6aff;
 }
-.radio input:checked + label:after {
+.radio input:checked + label:after,
+.table-form input:checked+label:after {
   content: "";
   position: absolute;
   width: 7px;
@@ -244,13 +240,14 @@ input {
 .filter .title--last {
   padding-right: 32px;
 }
-.filter label {
+.status {
   margin: 0 14px;
+  cursor: pointer;
 }
 .filter p:first-child {
   margin-bottom: 30px;
 }
-.filter label:not([for="date"]):before {
+.status:before {
   content: "";
   position: absolute;
   width: 16px;
@@ -275,10 +272,10 @@ input {
   border-bottom: 2px solid #244dd7;
   border-left: 2px solid #244dd7;
 }
-.filter [for="sellout"] {
+.filter .sellout {
   margin-right: 0;
 }
-.gender {
+.third__gender {
   width: 42.7%;
   float: left;
   position: relative;
@@ -286,43 +283,45 @@ input {
 .third input {
   display: none;
 }
-.gender [for="male"]:before,
-.gender [for="female"]:before {
+.male-label:before,
+.female-label:before {
   content: '';
   position: absolute;
   width: 72px;
   height: 72px;
   left: 0;
+  background-image: url(../images/sprite.png);
+  transition: none;
 }
-.gender [for="male"]:before {
+.male-label:before {
   top: 5px;
-  background-image: url(../images/male.png);
+  background-position: -24px 0;
 }
-.gender [for="female"]:before {
+.female-label:before {
   top: 85px;
-  background-image: url(../images/female.png);
+  background-position: -98px 0;
 }
 .male:checked+label:before {
-  background-image: url(../images/actmale.png);
+  background-position: -24px 77px;
 }
 .female:checked+label:before {
-  background-image: url(../images/actfemale.png);
+  background-position: -98px 75px;
 }
 .third label:hover {
   cursor: pointer;
 }
-.gender p {
+.third__gender p {
   margin: 0;
   padding: 35px 0 0 85px;
   font: 700 16px "Roboto";
 }
-.gender label {
+.third__gender label {
   transition: all 0.2s ease;
 }
-.gender input:checked+label {
+.third__gender input:checked+label {
   color: #244dd7;
 }
-.gender p:first-child {
+.third__gender p:first-child {
   margin-bottom: 28px;
 }
 .another {
@@ -387,19 +386,23 @@ th {
 .table-form table {
   width: 41.8%;
 }
-.table-form tr th:first-child {
+.table-form th:first-child {
   text-align: left;
 }
-.table-form tr th:last-child,
-.table-form tr td:last-child {
-  text-align: right;
-}
-.table-form input,
+.w100,
 .table-form select {
   width: 100%;
+  box-sizing: border-box;
+}
+td:last-child,
+th:last-child {
+  width: 340px;
 }
 .table-form td p {
-  display: inline-block;
+  float: left;
   margin: 0;
-  width: 75px;
+  width: 100px;
+}
+.gender {
+  padding: 0 15px;
 }
