@@ -186,6 +186,16 @@ input {
 .table-form label {
   position: relative;
 }
+.date-container {
+  position: relative;
+  display: inline-block;
+}
+.date {
+  padding: 10px 16px;
+  font: 400 14px "Roboto";
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
 .date-label {
   margin: 0;
 }
@@ -194,12 +204,23 @@ input {
   position: absolute;
   width: 20px;
   height: 18px;
-  top: 0px;
-  right: 15px;
+  top: 0;
+  right: 16px;
   background-image: url(../images/sprite.png);
   background-position: 0 -14px;
-  z-index: 99999;
 }
+.crutch {
+  position: absolute;
+  width: 100%;
+  height: 42px;
+  right: 0;
+  top: 0;
+  transition: all 3s ease;
+  cursor: pointer;
+}
+.crutch:hover {
+  visibility: hidden;
+} 
 .radio label:hover,
 .checkbox label:hover {
   cursor: pointer;
@@ -386,12 +407,6 @@ input {
 .another input:checked+label:after {
   left: -43px;
 }
-.date {
-  padding: 10px 16px;
-  font: 400 14px "Roboto";
-  border: 1px solid #ccc;
-  border-radius: 3px;
-}
 h3 {
   margin: 0;
   padding-bottom: 25px;
@@ -427,4 +442,21 @@ th:last-child {
 }
 .gender {
   padding: 0 15px;
+}
+.file {
+  position: absolute;
+  max-width: 170px;
+  visibility: hidden;
+}
+.photo {
+  padding: 12px 38px;
+  display: inline-block;
+  border-radius: 3px;
+  color: #fff;
+  background-color: #3e6aff;
+}
+.photo:hover {
+  background-color: #2857f4;
+  box-shadow: 0 2px 3px rgba(15, 40, 126, 0.35);
+  cursor: pointer;
 }
