@@ -24,7 +24,7 @@
             /></label>
             <label for="email"
               ><input
-                type="text"
+                type="email"
                 name="email"
                 id="email"
                 name="email"
@@ -60,21 +60,52 @@
           </form>
         </div>
         <div class="fixed">
-          <h2>06. фіксована форма</h2>
-          <div class="fixed-form">
-            <div class="fixed-wrapper">
-              <input type="checkbox" id="close" class="close"><label for="close"></label>
-              <form action="">
-                <p>Логін</p>
-                <label for="fixed-login"><input type="text" id="fixed-login" name="name" class="fixed-text"/></label>
-                <p>Пароль</p>
-                <label for="fixed-password"><input type="password" id="fixed-password" name="password" class="fixed-text"/></label>
-                <a href="#" class="forgot">Забули пароль?</a>
-                <p class="remember-row">
-                  <input type="checkbox" id="remember" name="login" value="remember" class="remember"><label for="remember" class="status">Запам’ятати пароль</label>
-                </p>
-                <label for="login"><input type="submit" id="login" name="login" value="Увійти" class="reg fixed-reg"></label>
-              </form>
+          <input type="checkbox" id="open" class="open" checked/><label for="open"
+            >
+            </label>
+          <div class="disappear">
+            <h2>06. фіксована форма</h2>
+            <div class="fixed-form">
+              <div class="fixed-wrapper">
+                <form action="">
+                  <p>Логін</p>
+                  <label for="fixed-login"
+                    ><input
+                      type="text"
+                      id="fixed-login"
+                      name="name"
+                      class="fixed-text"
+                  /></label>
+                  <p>Пароль</p>
+                  <label for="fixed-password"
+                    ><input
+                      type="password"
+                      id="fixed-password"
+                      name="password"
+                      class="fixed-text"
+                  /></label>
+                  <a href="#" class="forgot">Забули пароль?</a>
+                  <p class="remember-row">
+                    <input
+                      type="checkbox"
+                      id="remember"
+                      name="login"
+                      value="remember"
+                      class="remember"
+                    /><label for="remember" class="status"
+                      >Запам’ятати пароль</label
+                    >
+                  </p>
+                  <label for="login"
+                    ><input
+                      type="submit"
+                      id="login"
+                      name="login"
+                      value="Увійти"
+                      class="reg fixed-reg"
+                  /></label>
+                </form>
+              </div>
             </div>
           </div>
         </div>
@@ -304,10 +335,10 @@
                   >
                 </td>
               </tr>
-              <tr>
+              <tr class="comment-row">
                 <td>Коментарій:</td>
-                <td></td>
-              </tr>
+                <td><label for="comment"><textarea name="comment" id="comment" placeholder="Введіть текст повідомлення" cols="30" rows="10"></textarea></label></td>
+              </tr >
               <tr>
                 <td></td>
                 <td></td>

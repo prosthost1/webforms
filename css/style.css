@@ -68,11 +68,10 @@ h1 {
   width: 310px;
   right: 8.6%;
   top: 17%;
-  z-index: 1;
+  z-index: 4;
   font: 400 14px "Roboto";
 }
 .fixed-form {
-  position: relative;
   padding: 25px 0 20px;
   background-color: #fafafa;
   border: 1px solid #e6e6e6;
@@ -83,21 +82,35 @@ h1 {
   width: 84%;
   margin: 0 auto;
 }
-.close {
-  display: none;
-}
-.close+label:before {
+.open+label:before {
   content: '';
   position: absolute;
   cursor: pointer;
   width: 10px;
   height: 10px;
   right: 10px;
-  top: 12px;
+  top: 83px;
   background-image: url(../images/sprite.png);
   background-position: 0 -34px;
 }
-.close:checked {
+.open:checked+label:before {
+  display: none;
+}
+.open:checked+label:after {
+  content: 'Увійти в аккаунт';
+  display: block;
+  position: fixed;
+  cursor: pointer;
+  padding: 20px;  
+  right: 8.6%;
+  top: 30%;
+  border-radius: 8px;
+  background-color: #12d661;
+  color: #fff;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+.open:checked~.disappear {
   display: none;
 }
 .fixed p {
@@ -189,7 +202,8 @@ h2 {
   border-radius: 3px;
   transition: all 0.2s ease;
 }
-.reg:hover {
+.reg:hover,
+.open+label:hover:after {
   background-color: #07be51;
   box-shadow: 0 2px 3px rgba(8, 118, 52, 0.35);
 }
@@ -511,6 +525,13 @@ th:last-child {
   margin: 0;
   width: 100px;
 }
+.table-form td,
+.table-form th {
+  padding-bottom: 14px;
+}
+.table-form tr:last-child td {
+  padding-bottom: 0;
+}
 .gender {
   padding: 0 15px;
 }
@@ -524,10 +545,23 @@ th:last-child {
   display: inline-block;
   border-radius: 3px;
   color: #fff;
+  font-weight: 700;
   background-color: #3e6aff;
 }
 .photo:hover {
   background-color: #2857f4;
   box-shadow: 0 2px 3px rgba(15, 40, 126, 0.35);
   cursor: pointer;
+}
+.table-form textarea {
+  width: 340px;
+  max-height: 130px;
+  padding: 15px;
+  border: 1px solid #ccc;
+}
+.comment-row td {
+  vertical-align: top;
+}
+.comment-row td:first-child {
+  padding-top: 15px;
 }
