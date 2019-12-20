@@ -10,7 +10,7 @@
   <body>
     <div class="wrapper">
       <h1>Форми</h1>
-      <div class="first container">
+      <div class="first container clear">
         <div class="simple">
           <form action="">
             <h2>01. проста форма</h2>
@@ -58,6 +58,25 @@
                 class="reg"
             /></label>
           </form>
+        </div>
+        <div class="fixed">
+          <h2>06. фіксована форма</h2>
+          <div class="fixed-form">
+            <div class="fixed-wrapper">
+              <input type="checkbox" id="close" class="close"><label for="close"></label>
+              <form action="">
+                <p>Логін</p>
+                <label for="fixed-login"><input type="text" id="fixed-login" name="name" class="fixed-text"/></label>
+                <p>Пароль</p>
+                <label for="fixed-password"><input type="password" id="fixed-password" name="password" class="fixed-text"/></label>
+                <a href="#" class="forgot">Забули пароль?</a>
+                <p class="remember-row">
+                  <input type="checkbox" id="remember" name="login" value="remember" class="remember"><label for="remember" class="status">Запам’ятати пароль</label>
+                </p>
+                <label for="login"><input type="submit" id="login" name="login" value="Увійти" class="reg fixed-reg"></label>
+              </form>
+            </div>
+          </div>
         </div>
       </div>
       <div class="second container">
@@ -278,7 +297,12 @@
               </tr>
               <tr>
                 <td>Фото:</td>
-                <td><label for="photo" class="photo"><input type="file" id="photo" class="file">Виберіть файл</label></td>
+                <td>
+                  <label for="photo" class="photo"
+                    ><input type="file" id="photo" class="file" />Виберіть
+                    файл</label
+                  >
+                </td>
               </tr>
               <tr>
                 <td>Коментарій:</td>
