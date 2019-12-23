@@ -189,6 +189,7 @@ h2 {
 }
 .sign-up {
   padding: 12px 15px;
+  min-height: 44px;
   border: 1px solid #ccc;
   border-radius: 3px;
 }
@@ -255,8 +256,7 @@ h2 {
 }
 .second p,
 .third p,
-.table-form,
-.style-table p {
+.table-form {
   margin: 0;
   font: 400 14px "Roboto";
   color: #1f222c;
@@ -583,37 +583,48 @@ th:last-child {
   padding-top: 15px;
 }
 .style-table {
-  width: 57%;
+  width: 680px;
 }
 .style-table h2 {
   padding-bottom: 35px;
 }
+.style-table h3 {
+  padding-bottom: 40px;
+}
 .table {
   display: table;
   width: 100%;
+}
+.first-table {
+  padding-bottom: 30px;
+  border-bottom: 1px solid #e9e9e9;
+}
+.second-table {
+  padding: 50px 0 35px;
+}
+.second-table .table-cell:nth-child(2) {
+  width: 66%;
+}
+.second-table i .adress {
+  width: 98.5%;
 }
 .table-row {
   display: table-row;
 }
 .table-cell {
   display: table-cell;
+  position: relative;
+  width: 33%;
+}
+.table-cell span {
+  position: absolute;
+  margin: 0;
+  top: -20px;
   font: 400 13px "Roboto";
   color: #b3b3b3;
 }
 .style-table .sign-up {
   width: 220px;
-}
-.table-text {
-  padding-bottom: 5px;
-}
-.style-table [type="text"] {
-  margin: 0 10px 15px 0;
-}
-.style-table .mb30 {
-  margin-bottom: 30px;
-}
-.table-row:nth-child(2) i {
-  border-bottom: 1px solid #e9e9e9;
 }
 .style-table .location:after {
   content: '';
@@ -624,23 +635,21 @@ th:last-child {
   right: 33px;
   top: -2px;
 }
-.table-row:nth-child(3) i {
-  padding-top: 25px;
-}
 .style-table label {
   margin: 0;
 }
 .agree-row {
-  max-width: 652px;
   padding: 15px 14px 25px;
   border-bottom: 1px solid #e9e9e9;
+  font: 400 14px "Roboto";
+  color: #1f222c;
 }
 .btns {
   padding-top: 30px;
 }
 .back {
   float: left;
-  padding: 16px 25px;
+  padding: 13px 25px;
   font: 700 14px "Roboto";
   color: #6e6f77;
   text-decoration: none;
