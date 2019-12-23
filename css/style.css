@@ -310,7 +310,7 @@ input {
   height: 42px;
   right: 0;
   top: 0;
-  transition: all 3s ease;
+  transition: all 1s ease;
   cursor: pointer;
 }
 .crutch:hover {
