@@ -64,6 +64,7 @@ textarea {
   height: 6px;
   top: 5px;
   right: 14px;
+  z-index: 2;
   background-image: url(../images/sprite.png);
 }
 .simple {
@@ -210,6 +211,7 @@ h2 {
   color: #fff;
   background-color: #12d661;
   border-radius: 3px;
+  border: none;
   transition: all 0.2s ease;
 }
 .reg:hover,
