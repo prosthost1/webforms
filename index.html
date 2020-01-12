@@ -15,9 +15,12 @@
     <div class="first container clear">
       <div class="simple">
         <form action="" method="GET">
+          <input type="hidden" name="form" value="1">
           <h2>01. проста форма</h2>
-          <label for="name"><input type="text" name="name" id="name" class="sign-up" placeholder="Введіть ім’я" /></label>
-          <label for="email"><input type="email" name="email" id="email" name="email" placeholder="Email" class="sign-up" /></label>
+          <label for="name"><input type="text" name="name" id="name" class="sign-up"
+              placeholder="Введіть ім’я" /></label>
+          <label for="email"><input type="email" name="email" id="email" name="email" placeholder="Email"
+              class="sign-up" /></label>
           <label for="city" class="location">
             <select name="location" id="city" class="sign-up">
               <option value="Ваше місто" selected disabled>Ваше місто</option>
@@ -32,7 +35,8 @@
               </option>
             </select>
           </label>
-          <label for="email"><textarea name="email" id="email" cols="30" rows="10" placeholder="Email" class="sign-up"></textarea></label>
+          <label for="email"><textarea name="email" id="email" cols="30" rows="10" placeholder="Email"
+              class="sign-up"></textarea></label>
           <label for="reg"><input type="submit" name="submit" id="reg" value="Зареєструватися" class="reg" /></label>
         </form>
       </div>
@@ -44,15 +48,19 @@
           <div class="fixed-form">
             <div class="fixed-wrapper">
               <form action="" method="POST">
+                <input type="hidden" name="form" value="6">
                 <p>Логін</p>
                 <label for="fixed-login"><input type="text" id="fixed-login" name="name" class="fixed-text" /></label>
                 <p>Пароль</p>
-                <label for="fixed-password"><input type="password" id="fixed-password" name="password" class="fixed-text" /></label>
+                <label for="fixed-password"><input type="password" id="fixed-password" name="password"
+                    class="fixed-text" /></label>
                 <a href="#" class="forgot">Забули пароль?</a>
                 <p class="remember-row">
-                  <input type="checkbox" id="remember" name="login" value="remember" class="remember" /><label for="remember" class="status">Запам’ятати пароль</label>
+                  <input type="checkbox" id="remember" name="login" value="remember" class="remember" /><label
+                    for="remember" class="status">Запам’ятати пароль</label>
                 </p>
-                <label for="login"><input type="submit" id="login" name="login" value="Увійти" class="reg fixed-reg" /></label>
+                <label for="login"><input type="submit" id="login" name="login" value="Увійти"
+                    class="reg fixed-reg" /></label>
               </form>
             </div>
           </div>
@@ -62,6 +70,7 @@
     <div class="second container">
       <h2 class="form-title">02. елементи</h2>
       <form action="" method="GET" class="clear">
+        <input type="hidden" name="form" value="2">
         <div class="radio">
           <p>
             <input type="radio" name="shipping" id="mail" value="mail" checked />
@@ -78,7 +87,8 @@
         </div>
         <div class="checkbox">
           <p>
-            <input type="checkbox" name="agreement" id="conditions" value="conditions" /><label for="conditions">Прочитав умови договору</label>
+            <input type="checkbox" name="agreement" id="conditions" value="conditions" /><label
+              for="conditions">Прочитав умови договору</label>
           </p>
           <p>
             <input type="checkbox" name="agreement" id="pdv" value="pdv" /><label for="pdv">Згідний з ПДВ 9%</label>
@@ -98,7 +108,8 @@
               товари</label>
           </p>
           <p>
-            <input type="checkbox" name="filter" id="sellout" /><label for="sellout" class="sellout status">Розпродаж</label>
+            <input type="checkbox" name="filter" id="sellout" /><label for="sellout"
+              class="sellout status">Розпродаж</label>
           </p>
           <p class="title title--last">Дата</p>
           <span class="date-container"><label for="date" class="date-label">
@@ -112,18 +123,21 @@
     <div class="third container">
       <h2 class="form-title">03. стилізовані чекбокси</h2>
       <form action="" method="GET" class="clear">
+        <input type="hidden" name="form" value="3">
         <div class="third__gender">
           <p>
             <input type="radio" id="male" value="male" name="gender" class="male" />
             <label for="male" class="male-label">Чоловік</label>
           </p>
           <p>
-            <input type="radio" name="gender" id="female" value="female" class="female" /><label for="female" class="female-label">Жінка</label>
+            <input type="radio" name="gender" id="female" value="female" class="female" /><label for="female"
+              class="female-label">Жінка</label>
           </p>
         </div>
         <div class="another">
           <p>
-            <input type="checkbox" id="another__news" name="checkbox" /><label for="another__news">Отримувати новини</label>
+            <input type="checkbox" id="another__news" name="checkbox" /><label for="another__news">Отримувати
+              новини</label>
           </p>
           <p>
             <input type="checkbox" id="sausage" name="checkbox" /><label for="sausage">Купити додому ковбаси</label>
@@ -138,12 +152,14 @@
       <h2 class="form-title">04. форма таблицею</h2>
       <h3>Заповніть усі необхідні поля</h3>
       <form action="" method="POST">
+        <input type="hidden" name="form" value="4">
         <table>
           <thead>
             <tr>
               <th><label for="flp">ФІО:</label></th>
               <th>
-                <input type="text" name="name" id="flp" maxlength="16" minlength="6" placeholder="Введіть ім’я" class="w100 sign-up" />
+                <input type="text" name="name" id="flp" maxlength="16" minlength="6" placeholder="Введіть ім’я"
+                  class="w100 sign-up" />
               </th>
             </tr>
           </thead>
@@ -151,7 +167,8 @@
             <tr>
               <td><label for="password">Пароль:</label></td>
               <td>
-                <input type="password" name="password" id="password" class="w100 sign-up" maxlength="16" placeholder="Введіть не менше 6 символів" />
+                <input type="password" name="password" id="password" class="w100 sign-up" maxlength="16"
+                  placeholder="Введіть не менше 6 символів" />
               </td>
             </tr>
             <tr>
@@ -177,7 +194,8 @@
               <td>Стать:</td>
               <td class="clear gender">
                 <p>
-                  <input type="radio" name="gender" id="man" value="man" /><label for="man" class="gender__man">Чоловік</label>
+                  <input type="radio" name="gender" id="man" value="man" /><label for="man"
+                    class="gender__man">Чоловік</label>
                 </p>
                 <p>
                   <input type="radio" name="gender" value="woman" id="woman" />
@@ -195,7 +213,8 @@
             <tr class="comment-row">
               <td>Коментарій:</td>
               <td>
-                <label for="comment"><textarea name="comment" id="comment" placeholder="Введіть текст повідомлення" cols="30" rows="8" maxlength="45" class="sign-up"></textarea></label>
+                <label for="comment"><textarea name="comment" id="comment" placeholder="Введіть текст повідомлення"
+                    cols="30" rows="8" maxlength="45" class="sign-up"></textarea></label>
               </td>
             </tr>
             <tr>
@@ -209,47 +228,61 @@
       </form>
     </div>
     <div class="style-table">
-      <h2 class="form-title">05. форма таблицею</h2>
-      <h3>Оформлення заявки</h3>
-      <div class="table first-table">
-        <p class="table-row">
-          <i class="table-cell">
-            <span>Прізвище та ім’я</span><label for="name-surname"><input type="text" name="name" id="name-surname" class="sign-up" /></label>
-          </i>
-          <i class="table-cell">
-            <span>Ел. пошта</span><label for="e-mail"><input type="email" name="email" id="e-mail" class="sign-up" /></label>
-          </i>
-          <i class="table-cell">
-            <span>Телефон</span><label for="phone-number"><input type="tel" name="phone" id="phone-number" maxlength="16" class="sign-up" /></label>
-          </i>
-        </p>
-      </div>
-      <div class="table second-table">
-        <p class="table-row">
-          <i class="table-cell"><span>Країна</span><label for="country" class="location"><select name="country" id="country" class="sign-up">
-                <option value="your-country" disabled selected>Ваша Країна</option>
-                <option value="Indonesia">Індонезія</option>
-                <option value="Mongolia">Монголія</option>
-                <option value="Moldova">Молдавія</option>
-                <option value="Azerbaijan">Азербайджан</option>
-                <option value="Ukraine">Україна</option>
-              </select></label>
-          </i>
-          <i class="table-cell"><span>Адреса</span><label for="adress"><input type="text" name="adress" id="adress" class="sign-up adress" required></label></i>
-        </p>
-      </div>
-      <div class="table third-table">
-        <p class="table-row">
-          <i class="table-cell"><span>Місто</span><label for="town"><input type="text" name="town" id="town" maxlength="20" class="sign-up" required></label></i>
-          <i class="table-cell"><span>Будинок</span><label for="house"><input type="text" name="house" id="house" maxlength="10" class="sign-up"></label></i>
-          <i class="table-cell"><span>Поштовий індекс</span><label for="postcode"><input type="number" name="postcode" id="postcode" maxlength="8" class="sign-up" required></label></i>
-        </p>
-      </div>
-      <p class="agree-row"><input type="checkbox" value="consent" id="consent" name="application" class="agree" required checked><label for="consent" class="status">Я погоджуюсь з правилами оплати та доставки товару</label></p>
-      <div class="btns clear">
-        <a href="#" class="back">Повернутися назад</a>
-        <label for="checkout"><input type="submit" id="checkout" name="application" value="Оформити покупку" class="checkout"></label>
-      </div>
+      <form action="" method="POST">
+        <input type="hidden" name="form" id="5">
+        <h2 class="form-title">05. форма таблицею</h2>
+        <h3>Оформлення заявки</h3>
+        <div class="table first-table">
+          <p class="table-row">
+            <i class="table-cell">
+              <span>Прізвище та ім’я</span><label for="name-surname"><input type="text" name="name" id="name-surname"
+                  class="sign-up" /></label>
+            </i>
+            <i class="table-cell">
+              <span>Ел. пошта</span><label for="e-mail"><input type="email" name="email" id="e-mail"
+                  class="sign-up" /></label>
+            </i>
+            <i class="table-cell">
+              <span>Телефон</span><label for="phone-number"><input type="tel" name="phone" id="phone-number"
+                  maxlength="16" class="sign-up" /></label>
+            </i>
+          </p>
+        </div>
+        <div class="table second-table">
+          <p class="table-row">
+            <i class="table-cell"><span>Країна</span><label for="country" class="location"><select name="country"
+                  id="country" class="sign-up">
+                  <option value="your-country" disabled selected>Ваша Країна</option>
+                  <option value="Indonesia">Індонезія</option>
+                  <option value="Mongolia">Монголія</option>
+                  <option value="Moldova">Молдавія</option>
+                  <option value="Azerbaijan">Азербайджан</option>
+                  <option value="Ukraine">Україна</option>
+                </select></label>
+            </i>
+            <i class="table-cell"><span>Адреса</span><label for="adress"><input type="text" name="adress" id="adress"
+                  class="sign-up adress" required></label></i>
+          </p>
+        </div>
+        <div class="table third-table">
+          <p class="table-row">
+            <i class="table-cell"><span>Місто</span><label for="town"><input type="text" name="town" id="town"
+                  maxlength="20" class="sign-up" required></label></i>
+            <i class="table-cell"><span>Будинок</span><label for="house"><input type="text" name="house" id="house"
+                  maxlength="10" class="sign-up"></label></i>
+            <i class="table-cell"><span>Поштовий індекс</span><label for="postcode"><input type="number" name="postcode"
+                  id="postcode" maxlength="8" class="sign-up" required></label></i>
+          </p>
+        </div>
+        <p class="agree-row"><input type="checkbox" value="consent" id="consent" name="application" class="agree"
+            required checked><label for="consent" class="status">Я погоджуюсь з правилами оплати та доставки
+            товару</label></p>
+        <div class="btns clear">
+          <a href="#" class="back">Повернутися назад</a>
+          <label for="checkout"><input type="submit" id="checkout" name="application" value="Оформити покупку"
+              class="checkout"></label>
+        </div>
+      </form>
     </div>
   </div>
 </body>
