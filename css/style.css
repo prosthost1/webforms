@@ -159,6 +159,7 @@ textarea {
 }
 textarea {
   resize: vertical;
+  max-height: 300px;
 }
 h2 {
   font: 700 20px "Roboto";

@@ -17,9 +17,9 @@
         <form action="" method="GET">
           <input type="hidden" name="form" value="1">
           <h2>01. проста форма</h2>
-          <label for="name"><input type="text" name="name" id="name" class="sign-up"
+          <label for="name"><input type="text" name="name" id="name" class="sign-up" required maxlength="32"
               placeholder="Введіть ім’я" /></label>
-          <label for="email"><input type="email" name="email" id="email" name="email" placeholder="Email"
+          <label for="email"><input type="email" name="email" id="email" name="email" placeholder="Email" required maxlength="20"
               class="sign-up" /></label>
           <label for="city" class="location">
             <select name="location" id="city" class="sign-up">
@@ -35,7 +35,7 @@
               </option>
             </select>
           </label>
-          <label for="email"><textarea name="email" id="email" cols="30" rows="10" placeholder="Email"
+          <label for="email"><textarea name="email" id="email" cols="30" rows="10" placeholder="Email" maxlength="100"
               class="sign-up"></textarea></label>
           <label for="reg"><input type="submit" name="submit" id="reg" value="Зареєструватися" class="reg" /></label>
         </form>
@@ -50,9 +50,9 @@
               <form action="" method="POST">
                 <input type="hidden" name="form" value="6">
                 <p>Логін</p>
-                <label for="fixed-login"><input type="text" id="fixed-login" name="name" class="fixed-text" /></label>
+                <label for="fixed-login"><input type="text" id="fixed-login" name="name" class="fixed-text" required maxlength="18"/></label>
                 <p>Пароль</p>
-                <label for="fixed-password"><input type="password" id="fixed-password" name="password"
+                <label for="fixed-password"><input type="password" id="fixed-password" name="password" required maxlength="18"
                     class="fixed-text" /></label>
                 <a href="#" class="forgot">Забули пароль?</a>
                 <p class="remember-row">
@@ -214,7 +214,7 @@
               <td>Коментарій:</td>
               <td>
                 <label for="comment"><textarea name="comment" id="comment" placeholder="Введіть текст повідомлення"
-                    cols="30" rows="8" maxlength="45" class="sign-up"></textarea></label>
+                    cols="30" rows="8" maxlength="100" class="sign-up"></textarea></label>
               </td>
             </tr>
             <tr>
