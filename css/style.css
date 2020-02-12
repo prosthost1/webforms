@@ -36,6 +36,8 @@ label:after {
   clear: both;
 }
 h1 {
+  margin-top: 0;
+  padding-top: 75px;
   font: 700 30px "Roboto";
   color: #1f222c;
   text-align: center;
@@ -56,14 +58,15 @@ textarea {
 }
 .location {
   position: relative;
+  display: block;
 }
 .location:before {
   content: "";
   position: absolute;
   width: 9px;
   height: 6px;
-  top: 5px;
-  right: 14px;
+  top: 19px;
+  right: 20px;
   z-index: 2;
   background-image: url(../images/sprite.png);
 }
@@ -132,6 +135,7 @@ textarea {
 .fixed-text {
   width: 100%;
   margin-bottom: 12px;
+  max-height: 37px;
   padding: 11px 10px;
   border: 1px solid #cccccc;
   border-radius: 3px;
@@ -184,7 +188,7 @@ h2 {
 .table-form select,
 .style-table select {
   -webkit-appearance: none;
-  padding: 12px 17px;
+  padding: 12px 15px;
   font: 400 14px "Roboto";
   background-color: #fff;
   outline: none;
@@ -201,7 +205,7 @@ h2 {
   box-shadow: 0 0 5px rgba(62, 106, 255, 0.55);
   border: 1px solid #3e6aff;
 }
-::-webkit-input-placeholder {
+::placeholder{
   font: 400 14px "Roboto";
   color: #b3b3b3;
 }
@@ -290,6 +294,8 @@ input {
 }
 .date {
   padding: 10px 16px;
+  max-width: 160px;
+  box-sizing: border-box;
   font: 400 14px "Roboto";
   border: 1px solid #ccc;
   border-radius: 3px;
@@ -307,17 +313,13 @@ input {
   background-image: url(../images/sprite.png);
   background-position: 0 -14px;
 }
-.crutch {
-  position: absolute;
-  width: 100%;
-  height: 42px;
-  right: 0;
-  top: 0;
-  transition: all 1s ease;
-  cursor: pointer;
+::-webkit-inner-spin-button {
+  display: none;
 }
-.crutch:hover {
-  visibility: hidden;
+::-webkit-calendar-picker-indicator {
+  opacity: 0;
+  height: 20px;
+  width: 20px;
 }
 .radio label:hover,
 .checkbox label:hover {
@@ -378,6 +380,9 @@ input {
 .remember:checked + label:after {
   top: 3px;
 }
+.filter__row:first-child {
+  margin-bottom: 30px;
+}
 .filter p {
   display: inline-block;
 }
@@ -391,9 +396,6 @@ input {
 .status {
   margin: 0 14px;
   cursor: pointer;
-}
-.filter p:first-child {
-  margin-bottom: 30px;
 }
 .status:before {
   content: "";
@@ -635,8 +637,8 @@ th:last-child {
   width: 1px;
   height: 19px;
   background-color: #ccc;
-  right: 33px;
-  top: -2px;
+  right: 38px;
+  top: 12px;
 }
 .style-table label {
   margin: 0;
