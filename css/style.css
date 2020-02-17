@@ -130,6 +130,7 @@ textarea {
   color: #b3b3b3;
 }
 .fixed p label {
+  margin: 0 14px;
   color: #1f222c;
 }
 .fixed-text {
@@ -261,6 +262,7 @@ h2 {
   border: 1px solid #e5e5e5;
   border-radius: 3px;
 }
+
 .second p,
 .third p,
 .table-form {
@@ -273,6 +275,7 @@ h2 {
 }
 .checkbox p {
   margin: 0 0 20px 15px;
+  width: 300px;
 }
 input {
   margin: 0;
@@ -287,6 +290,32 @@ input {
 .table-form label,
 .status {
   position: relative;
+}
+.filter-table {
+  width: 100%;
+  text-align: left;
+}
+.filter-table thead th {
+  padding-bottom: 15px;
+}
+.row-title {
+  font: 700 14px "Roboto";
+  color: #b3b3b3;
+}
+.table-text {
+  margin: 0;
+  padding: 0 10px 0 25px;
+  font: 400 14px "Roboto";
+  color: #1f2221;
+}
+.filter .status:before {
+  left: 0;
+}
+.filter .check:checked+label:after {
+  left: 5px;
+}
+.filter .check {
+  display: none;
 }
 .date-container {
   position: relative;
@@ -353,26 +382,17 @@ input {
   border-radius: 50%;
   background-color: #3e6aff;
 }
-.checkbox label:before {
-  content: "";
-  position: absolute;
-  width: 16px;
-  height: 16px;
-  left: -26px;
-  border-radius: 3px;
-  border: 1px solid #ccc;
-}
-.checkbox input:checked + label:before {
+.check:checked + label:before {
   border: 1px solid #3e6aff;
 }
-.checkbox input:checked + label:after,
+.check:checked + label:after,
 .remember:checked + label:after {
   content: "";
   position: absolute;
   width: 6px;
   height: 3px;
-  left: -21px;
-  top: 5px;
+  left: -20px;
+  top: 4px;
   transform: rotate(-45deg);
   border-bottom: 2px solid #244dd7;
   border-left: 2px solid #244dd7;
@@ -380,51 +400,30 @@ input {
 .remember:checked + label:after {
   top: 3px;
 }
-.filter__row:first-child {
-  margin-bottom: 30px;
-}
-.filter p {
-  display: inline-block;
-}
-.filter .title {
-  padding-right: 20px;
-  color: #b3b3b3;
-}
-.filter .title--last {
-  padding-right: 32px;
-}
 .status {
-  margin: 0 14px;
   cursor: pointer;
 }
 .status:before {
   content: "";
   position: absolute;
-  width: 16px;
-  height: 16px;
+  width: 17px;
+  height: 17px;
   left: -26px;
   top: -2px;
   border-radius: 3px;
   background-color: #fff;
   border: 1px solid #ccc;
 }
-.filter input:checked + label:before {
-  border-color: #3e6aff;
-}
-.filter input:checked + label::after,
 .agree:checked+label:after {
   content: "";
   position: absolute;
   width: 6px;
   height: 3px;
-  left: -21px;
-  top: 3px;
+  left: -20px;
+  top: 4px;
   transform: rotate(-45deg);
   border-bottom: 2px solid #244dd7;
   border-left: 2px solid #244dd7;
-}
-.filter .sellout {
-  margin-right: 0;
 }
 .third__gender {
   width: 42.7%;
