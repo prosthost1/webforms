@@ -47,12 +47,14 @@
             <div class="fixed-wrapper">
               <form action="send.php" method="POST">
                 <input type="hidden" name="form" value="6">
-                <p>Логін</p>
-                <label for="fixed-login"><input type="text" id="fixed-login" name="name" class="fixed-text" required
-                    maxlength="18" /></label>
-                <p>Пароль</p>
-                <label for="fixed-password"><input type="password" id="fixed-password" name="password" required
-                    maxlength="18" class="fixed-text" /></label>
+                <label for="fixed-login">
+                  <p>Логін</p>
+                </label>
+                <input type="text" id="fixed-login" name="name" class="fixed-text" required maxlength="18" />
+                <label for="fixed-password">
+                  <p>Пароль</p>
+                </label>
+                <input type="password" id="fixed-password" name="password" required maxlength="18" class="fixed-text" />
                 <a href="#" class="forgot">Забули пароль?</a>
                 <p class="remember-row">
                   <input type="checkbox" id="remember" name="login" value="remember" class="remember" /><label
@@ -174,9 +176,9 @@
               </td>
             </tr>
             <tr>
-              <td>Місто:</td>
+              <td><label for="location">Місто:</label></td>
               <td>
-                <label for="location" class="location"> <select name="location" id="location" class="w100 sign-up">
+                <label for="location" class="location"><select name="location" id="location" class="w100 sign-up">
                     <option value="Ваше місто" selected disabled>Ваше місто</option>
                     <option value="Київ">
                       Київ
@@ -191,7 +193,7 @@
               </td>
             </tr>
             <tr>
-              <td>Стать:</td>
+              <td><label for="man">Стать:</label></td>
               <td class="clear gender">
                 <p>
                   <input type="radio" name="gender" id="man" value="man" /><label for="man"
@@ -204,13 +206,13 @@
               </td>
             </tr>
             <tr>
-              <td>Фото:</td>
+              <td><label for="photo">Фото:</label></td>
               <td>
                 <label for="photo" class="photo"><input type="file" id="photo" class="file" />Виберіть файл</label>
               </td>
             </tr>
             <tr class="comment-row">
-              <td>Коментарій:</td>
+              <td><label for="comment">Коментарій:</label></td>
               <td>
                 <label for="comment"><textarea name="comment" id="comment" placeholder="Введіть текст повідомлення"
                     cols="30" rows="8" maxlength="100" class="sign-up"></textarea></label>
@@ -234,20 +236,30 @@
         <div class="table first-table">
           <p class="table-row">
             <i class="table-cell">
-              <span>Прізвище та ім’я</span><label for="name-surname"><input type="text" name="name" id="name-surname"
-                  class="sign-up" /></label>
+              <label for="name-surname">
+                <span>Прізвище та ім’я</span>
+              </label>
+              <input type="text" name="name" id="name-surname"class="sign-up" />
             </i> <i class="table-cell">
-              <span>Ел. пошта</span><label for="e-mail"><input type="email" name="email" id="e-mail"
-                  class="sign-up" /></label>
+              <label for="e-mail">
+                <span>Ел. пошта</span>
+              </label>
+              <input type="email" name="email" id="e-mail" class="sign-up" />
             </i> <i class="table-cell">
-              <span>Телефон</span><label for="phone-number"><input type="tel" name="phone" id="phone-number"
-                  maxlength="16" class="sign-up" /></label>
+              <label for="phone-number">
+                <span>Телефон</span>
+              </label>
+              <input type="tel" name="phone" id="phone-number" maxlength="16" class="sign-up" />
             </i>
           </p>
         </div>
         <div class="table second-table">
           <p class="table-row">
-            <i class="table-cell"><span>Країна</span><label for="country" class="location"><select name="country"
+            <i class="table-cell">
+              <label for="country" class="location">
+                <span>Країна</span>
+              </label>
+              <select name="country"
                   id="country" class="sign-up">
                   <option value="your-country" disabled selected>Ваша Країна</option>
                   <option value="Indonesia">Індонезія</option>
@@ -255,19 +267,36 @@
                   <option value="Moldova">Молдавія</option>
                   <option value="Azerbaijan">Азербайджан</option>
                   <option value="Ukraine">Україна</option>
-                </select></label> </i>
-            <i class="table-cell"><span>Адреса</span><label for="adress"><input type="text" name="adress" id="adress"
-                  class="sign-up adress" required></label></i>
+                </select>
+            </i>
+            <i class="table-cell">
+              <label for="adress">
+                <span>Адреса</span>
+              </label>
+              <input type="text" name="adress" id="adress" class="sign-up adress" required>
+              </i>
           </p>
         </div>
         <div class="table third-table">
           <p class="table-row">
-            <i class="table-cell"><span>Місто</span><label for="town"><input type="text" name="town" id="town"
-                  maxlength="20" class="sign-up" required></label></i>
-            <i class="table-cell"><span>Будинок</span><label for="house"><input type="text" name="house" id="house"
-                  maxlength="10" class="sign-up"></label></i>
-            <i class="table-cell"><span>Поштовий індекс</span><label for="postcode"><input type="number" name="postcode"
-                  id="postcode" class="sign-up" required></label></i>
+            <i class="table-cell">
+              <label for="town">
+                <span>Місто</span>
+              </label>
+              <input type="text" name="town" id="town"maxlength="20" class="sign-up" required>
+            </i>
+            <i class="table-cell">
+              <label for="house">
+                <span>Будинок</span>
+              </label>
+              <input type="text" name="house" id="house" maxlength="10" class="sign-up">
+            </i>
+            <i class="table-cell">
+              <label for="postcode">
+                <span>Поштовий індекс</span>
+              </label>
+              <input type="number" name="postcode" id="postcode" class="sign-up" required>
+            </i>
           </p>
         </div>
         <p class="agree-row">
